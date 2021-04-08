@@ -1,0 +1,16 @@
+C:\Users\hp\Documents\PBO\projectPBO\bin\Debug\net5.0\projectPBO.exe
+C:\Users\hp\Documents\PBO\projectPBO\bin\Debug\net5.0\projectPBO.deps.json
+C:\Users\hp\Documents\PBO\projectPBO\bin\Debug\net5.0\projectPBO.runtimeconfig.json
+C:\Users\hp\Documents\PBO\projectPBO\bin\Debug\net5.0\projectPBO.runtimeconfig.dev.json
+C:\Users\hp\Documents\PBO\projectPBO\bin\Debug\net5.0\projectPBO.dll
+C:\Users\hp\Documents\PBO\projectPBO\bin\Debug\net5.0\ref\projectPBO.dll
+C:\Users\hp\Documents\PBO\projectPBO\bin\Debug\net5.0\projectPBO.pdb
+C:\Users\hp\Documents\PBO\projectPBO\obj\Debug\net5.0\projectPBO.csprojAssemblyReference.cache
+C:\Users\hp\Documents\PBO\projectPBO\obj\Debug\net5.0\projectPBO.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hp\Documents\PBO\projectPBO\obj\Debug\net5.0\projectPBO.AssemblyInfoInputs.cache
+C:\Users\hp\Documents\PBO\projectPBO\obj\Debug\net5.0\projectPBO.AssemblyInfo.cs
+C:\Users\hp\Documents\PBO\projectPBO\obj\Debug\net5.0\projectPBO.csproj.CoreCompileInputs.cache
+C:\Users\hp\Documents\PBO\projectPBO\obj\Debug\net5.0\projectPBO.dll
+C:\Users\hp\Documents\PBO\projectPBO\obj\Debug\net5.0\ref\projectPBO.dll
+C:\Users\hp\Documents\PBO\projectPBO\obj\Debug\net5.0\projectPBO.pdb
+C:\Users\hp\Documents\PBO\projectPBO\obj\Debug\net5.0\projectPBO.genruntimeconfig.cache
