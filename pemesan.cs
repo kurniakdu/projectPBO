@@ -5,8 +5,8 @@ namespace projectPBO
     public class Pemesan
     {
         public string nama;
-        string alamat;
         string noTelp;
+        string alamat;
         // public string pesanan;
 
         public Pemesan(string nama, string noTelp, string alamat)

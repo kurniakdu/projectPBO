@@ -4,7 +4,14 @@ namespace projectPBO
 {
     public class Pesanan
     {
-            
+        double jumlahPesanan;
+        double hargaSatuan;
+
+        public double harga(double jumlahPesanan, double hargaSatuan)
+        {
+            double jumlahHarga = jumlahPesanan*hargaSatuan;
+            return jumlahHarga;
+        }
 
         public double percepatan(double asli, double req, double harga)
         {
