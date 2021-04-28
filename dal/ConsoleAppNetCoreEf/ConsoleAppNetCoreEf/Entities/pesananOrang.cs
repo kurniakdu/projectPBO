@@ -6,10 +6,10 @@ namespace ConsoleAppNetCoreEf.Entities
 {
     public class pesananOrang
     {
-        public string namaPemesan { get; set; }
-        public string telpPemesan { get; set; }
-        public string alamatPesanan { get; set; }
-        public int banyakPesanan { get; set; }
-        public int durasiPesanan { get; set; }
+        public string NamaPemesan { get; set; }
+        public string TelpPemesan { get; set; }
+        public string AlamatPesanan { get; set; }
+        public int BanyakPesanan { get; set; }
+        public int DurasiPesanan { get; set; }
     }
 }

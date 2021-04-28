@@ -11,8 +11,12 @@ namespace ConsoleAppNetCoreEf.Entities
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder
-                .UseSqlServer(@"Data Source=(localdb)\mssqllocaldb; Onotial catalog=OrdeDb;");
+                .UseSqlServer(@"Data Source-(localdb)\mssqllocaldb; Initial catalog-OrderDb;");
         }
-        
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<pesananOrang>()
+                .HasNoKey();
+        }
     }
 }
