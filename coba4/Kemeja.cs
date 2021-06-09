@@ -2,15 +2,15 @@ using System;
 
 namespace coba4
 {
-    public class Kaos : Pesanan
+    public class Kemeja : Pesanan
     {
-        double hargaSatuan = 50000;
-        double waktuProduksiPerLusin = 2;
+        double hargaSatuan = 75000;
+        double waktuProduksiPerLusin = 3;
         double jumlahPesanan;
         // static double hargaAkhir;
         // static double durasiAkhir;
 
-        public Kaos(double jumlahPesanan)
+        public Kemeja(double jumlahPesanan)
         {
             this.jumlahPesanan = jumlahPesanan;
         }
@@ -93,8 +93,5 @@ namespace coba4
         //     Console.WriteLine("Jumlah harga pesanan: " + totalHarga);
         //     Console.WriteLine("Durasi produksi pesanan: " + durasi);
         // }
-
-        //AKHIRNYAA SAYA BERHASIL :')
-        //ya semoga saja benar WKWKWK
     }
 }

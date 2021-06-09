@@ -21,7 +21,7 @@ namespace projectPBO
 
             Pemesan pelanggan = new Pemesan(nama, noTelp, alamat);
 
-            Console.WriteLine("\nPilihan pesanan:\n- Kaos\n- Belum ada");
+            Console.WriteLine("\nPilihan pesanan:\n- Kaos\n- Kemeja\n- Jas");
             Console.WriteLine("\nPilih produk!");
             string orderan = Console.ReadLine();
             Console.WriteLine("Masukan jumlah pesanan: ");
@@ -29,39 +29,91 @@ namespace projectPBO
             double lamaProduksi = 0;
             double reqHari = 0;
             double bayarWe = 0;
+            // Pesanan pesanan;
+            
 
             if (orderan == "Kaos")
             {
-                Kaos pesanan1 = new Kaos(Convert.ToDouble(jumlahPesanan));
-                pesanan1.dataPesanan(ref bayarWe, ref lamaProduksi);
-                bool adaReq = pesanan1.mauCepat(lamaProduksi, ref bayarWe, ref reqHari); 
+                Kaos pesanan = new Kaos(Convert.ToDouble(jumlahPesanan));
+                pesanan.dataPesanan(ref bayarWe, ref lamaProduksi);
+                pelanggan.order(orderan, Convert.ToDouble(jumlahPesanan), bayarWe, lamaProduksi);
+                bool adaReq = pesanan.mauCepat(lamaProduksi, ref bayarWe, ref reqHari); 
                 if (adaReq == true) 
                 {
-                    Console.WriteLine("Data pesanan telah diperbaharui");
-                    Console.WriteLine("\nKONFIRMASI PEMESANAN\n");
-                    pelanggan.infoPemesan();
-                    pesanan1.infoPesanan(orderan, bayarWe, reqHari);
-                    pelanggan.infoPemesan(alamat);
+                    pelanggan.editOrder(reqHari,  bayarWe);
+                    Console.WriteLine("\nData pesanan telah diperbaharui.");
+                    pelanggan.detailOrderan();
+                    // konfirm(orderan, bayarWe, reqHari, alamat);
+                    // Console.WriteLine("\nKONFIRMASI PEMESANAN");
+                    // Console.WriteLine("=================================\n");
+                    // pelanggan.infoPemesan();
+                    // pesanan.infoPesanan(orderan, bayarWe, reqHari);
+                    // pelanggan.infoPemesan(alamat);
                     penutup();
                 }
                 else
                 {
-                    Console.WriteLine("\nKONFIRMASI PEMESANAN\n");
-                    pelanggan.infoPemesan();
-                    pesanan1.infoPesanan(orderan, bayarWe, lamaProduksi);
-                    pelanggan.infoPemesan(alamat);
+                    pelanggan.detailOrderan();
+                    // konfirm(orderan, bayarWe, lamaProduksi, alamat);
+                    // Console.WriteLine("\nKONFIRMASI PEMESANAN");
+                    // Console.WriteLine("=================================\n");
+                    // pelanggan.infoPemesan();
+                    // pesanan.infoPesanan(orderan, bayarWe, lamaProduksi);
+                    // pelanggan.infoPemesan(alamat);
+                    penutup();
+                }
+            }
+            else if (orderan == "Kemeja")
+            {
+                Kemeja pesanan = new Kemeja(Convert.ToDouble(jumlahPesanan));
+                pesanan.dataPesanan(ref bayarWe, ref lamaProduksi);
+                pelanggan.order(orderan, Convert.ToDouble(jumlahPesanan), bayarWe, lamaProduksi);
+                bool adaReq = pesanan.mauCepat(lamaProduksi, ref bayarWe, ref reqHari); 
+                if (adaReq == true) 
+                {
+                    pelanggan.editOrder(reqHari,  bayarWe);
+                    Console.WriteLine("\nData pesanan telah diperbaharui.");
+                    pelanggan.detailOrderan();
+                    // konfirm(orderan, bayarWe, reqHari, alamat);
+                    // Console.WriteLine("\nKONFIRMASI PEMESANAN");
+                    // Console.WriteLine("=================================\n");
+                    // pelanggan.infoPemesan();
+                    // pesanan.infoPesanan(orderan, bayarWe, reqHari);
+                    // pelanggan.infoPemesan(alamat);
+                    penutup();
+                }
+                else
+                {
+                    pelanggan.detailOrderan();
+                    // konfirm(orderan, bayarWe, lamaProduksi, alamat);
+                    // Console.WriteLine("\nKONFIRMASI PEMESANAN");
+                    // Console.WriteLine("=================================\n");
+                    // pelanggan.infoPemesan();
+                    // pesanan.infoPesanan(orderan, bayarWe, lamaProduksi);
+                    // pelanggan.infoPemesan(alamat);
                     penutup();
                 }
             }
             else
             {
-                Console.WriteLine("Belom tersedia guys, mohon maap.");
-                Console.WriteLine("\nKONFIRMASI PEMESANAN\n");
+                Console.WriteLine("\nMohon maaf, produk belum tersedia.");
+                Console.WriteLine("\nKONFIRMASI PEMESANAN");
+                Console.WriteLine("=================================\n");
                 pelanggan.infoPemesan();
-                Console.WriteLine("\nDATA PESANAN\nJenis produk pesanan: "+orderan+"(tidak tersedia)");
-                pelanggan.infoPemesan(alamat);
-                penutup();
+                Console.WriteLine("\nDATA PESANAN\nJenis produk pesanan: " + orderan + " (belum tersedia)");
+                // pelanggan.infoPemesan(alamat);
+                // penutup();
+                Console.WriteLine("\nMohon maaf atas ketidak-nyamanannya.");
             }
+
+            // void konfirm(object pesanan, string jenis, double harga, double durasi, string alamat)
+            // {
+            //     Console.WriteLine("\nKONFIRMASI PEMESANAN\n");
+            //     pelanggan.infoPemesan();
+            //     pesanan.infoPesanan(orderan, bayarWe, reqHari);
+            //     pelanggan.infoPemesan(alamat);
+            //     penutup();
+            // }
 
             void penutup(){
                 Console.WriteLine("\nTerima kasih sudah memesan ^^\n");
